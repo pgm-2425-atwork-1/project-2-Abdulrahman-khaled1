@@ -14,7 +14,6 @@ body {
 .intro__content {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     justify-content: center;
     padding: 2rem;
 }
@@ -37,18 +36,40 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
-    display:flex;
-    max-width:13rem ;
+    display: flex;
+    max-width: 13rem;
     min-height: 5rem;
-    background-color:hsla(223, 100%, 84%, 1);
+    background-color: hsla(223, 100%, 84%, 1);
     border: none;
     font-size: 2rem;
 }
 
 .intro__buttons a {
     text-decoration: none;
-    color:  rgb(18, 27, 53);
+    color: rgb(18, 27, 53);
 }
+
 .intro__shape {
     display: none;
+}
+
+@media (min-width: 768px) {
+
+    .intro {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .intro__content {
+        padding: 2rem;
+    }
+    
+    .intro__content p {
+        min-width: 57rem;
+    }
+
+    .intro__shape {
+        padding-top: 5rem;
+        display: block;
+    }
 }
