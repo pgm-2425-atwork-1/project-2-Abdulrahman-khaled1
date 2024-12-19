@@ -4,8 +4,51 @@
 html {
     font-size: 62.5%;
 }
+
 body {
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Fira mono', sans-serif;
     background-color: (hsla(0, 0%, 100%, 1));
     color: (hsla(223, 28%, 15%, 1));
+}
+
+.intro__content {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    padding: 2rem;
+}
+
+.intro__content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    margin-top: 4rem;
+}
+
+.intro__content p {
+    font-size: 2rem;
+    max-width: 35rem;
+}
+
+.intro__buttons {
+    text-decoration: none;
+    border-radius: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    display:flex;
+    max-width:13rem ;
+    min-height: 5rem;
+    background-color:hsla(223, 100%, 84%, 1);
+    border: none;
+    font-size: 2rem;
+}
+
+.intro__buttons a {
+    text-decoration: none;
+    color:  rgb(18, 27, 53);
+}
+.intro__shape {
+    display: none;
 }
