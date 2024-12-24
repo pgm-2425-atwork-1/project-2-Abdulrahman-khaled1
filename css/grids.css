@@ -1,0 +1,13 @@
+
+
+
+
+.cards__list {
+    display: flex;
+    flex-direction: column;
+  list-style: none;
+}
+
+.card__description {
+    max-width: 30rem;
+}

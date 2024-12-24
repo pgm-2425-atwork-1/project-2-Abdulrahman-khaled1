@@ -52,17 +52,17 @@ body {
 }
 
 .intro__buttons {
-    text-decoration: none;
+    display: flex;
     border-radius: 1rem;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
-    display: flex;
     max-width: 13rem;
     min-height: 5rem;
     background-color: hsla(223, 100%, 84%, 1);
-    border: none;
+    font-family: 'Fira sans', sans-serif;
     font-size: 2rem;
+    font-weight: 400;
 }
 
 .intro__buttons a {
@@ -70,6 +70,9 @@ body {
     color: rgb(18, 27, 53);
 }
 
+.intro__buttons img {
+    margin-left: 1rem;
+}
 .intro__shape {
     display: none;
 }
@@ -81,3 +84,4 @@ body {
         display: block;
     }
 }
+

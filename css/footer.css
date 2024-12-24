@@ -2,9 +2,11 @@
 .footer {
     display: flex;
     flex-direction: column;;
-    padding: 1rem;
+    padding: rem;
     background-color: #fff;
     border-top: #a3ade3 2px solid;
+    width: 100%;
+    padding: 2rem 1rem;
 }
 
 @media (min-width: 768px) {

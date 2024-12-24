@@ -1,0 +1,24 @@
+.intro__article {
+    padding: 2rem 2rem 5rem 2rem;
+    font-family: "Fira Sans", sans-serif;
+}
+.intro__title {
+    font-size: 4rem;
+    max-width: 15rem;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.highlight {
+    color: hsla(0, 0%, 50%, 0.589);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.intro__description {
+    font-family: "Fira mono", sans-serif;
+    font-size: 1.5rem;
+    max-width: 35rem;
+    font-size: 1.5rem;
+    padding-top: 2rem ;
+}
