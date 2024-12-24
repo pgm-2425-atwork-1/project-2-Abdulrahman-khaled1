@@ -1,11 +1,66 @@
+/* Albums style */
+.albums__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
 
+@media (min-width: 768px) {
+    .albums__list {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+    }
+}
 
+.album {
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.album img {
+    width: 40rem;
+}
+
+.album__description {
+    text-align: center;
+    font-size: 2rem;;
+}
+
+.album__title {
+    max-width: 45rem;
+    padding: 1rem;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.album__genres {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.album__genre {
+    background-color: hsla(231, 66%, 82%, 0.6);
+    border-radius: 2rem;
+    padding: 1rem ;
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin: 1rem;
+}
+/* Series-Movies Cards style */
 
 .cards__list {
     display: flex;
     flex-direction: column;
-  list-style: none;
+    list-style: none;
 }
 
 .card__description {

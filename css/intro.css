@@ -2,6 +2,7 @@
     padding: 2rem 2rem 5rem 2rem;
     font-family: "Fira Sans", sans-serif;
 }
+
 .intro__title {
     font-size: 4rem;
     max-width: 15rem;
@@ -21,4 +22,10 @@
     max-width: 35rem;
     font-size: 1.5rem;
     padding-top: 2rem ;
+}
+
+@media (min-width: 768px) {
+    .intro__description {
+        max-width: 52rem;
+    }
 }

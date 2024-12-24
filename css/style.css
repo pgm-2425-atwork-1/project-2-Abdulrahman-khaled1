@@ -11,6 +11,15 @@ body {
     color: (hsla(223, 28%, 15%, 1));
 }
 
+
+@media (min-width: 768px) {
+
+.albums__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+}
 @media (min-width: 768px) {
 
     .intro {
