@@ -11,11 +11,25 @@ body {
     color: (hsla(223, 28%, 15%, 1));
 }
 
+@media (min-width: 768px) {
+
+    .intro {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
 .intro__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 2rem;
+}
+
+@media (min-width: 768px) {
+    .intro__content {
+        padding: 2rem;
+    }
 }
 
 .intro__content h1 {
@@ -28,6 +42,13 @@ body {
 .intro__content p {
     font-size: 2rem;
     max-width: 35rem;
+}
+
+@media (min-width: 768px) {
+
+    .intro__content p {
+        min-width: 57rem;
+    }
 }
 
 .intro__buttons {
@@ -54,19 +75,6 @@ body {
 }
 
 @media (min-width: 768px) {
-
-    .intro {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .intro__content {
-        padding: 2rem;
-    }
-    
-    .intro__content p {
-        min-width: 57rem;
-    }
 
     .intro__shape {
         padding-top: 5rem;

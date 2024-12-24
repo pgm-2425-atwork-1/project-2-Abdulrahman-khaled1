@@ -1,0 +1,30 @@
+
+.footer {
+    display: flex;
+    flex-direction: column;;
+    padding: 1rem;
+    background-color: #fff;
+    border-top: #a3ade3 2px solid;
+}
+
+@media (min-width: 768px) {
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.footer p {
+    font-size: 1.5rem;
+}
+
+.footer__social {
+    display: flex;
+}
+
+.footer__social img {
+    margin-left: 1rem;
+    max-width: 2rem;
+    height: auto;
+    cursor: pointer;
+}
