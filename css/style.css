@@ -101,7 +101,7 @@ body {
 
 /* navgation links*/
 
-.navgation__links {
+.navigation__links {
     width: 100%;
     border-top: hsl(231, 53%, 76%) 1px solid;
     display: flex;    
@@ -111,7 +111,7 @@ body {
 }
 
 
-.navgation__link {
+.navigation__link {
     margin-top: 2rem;
     text-decoration: none;
     font-size: 2.5rem;
@@ -125,7 +125,7 @@ body {
     border-radius:5px;
 }
 
-.navgation__link img {
+.navigation__link img {
     width: 3rem;
 }
 
