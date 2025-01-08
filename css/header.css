@@ -38,11 +38,11 @@ nav {
 
 .header__nav-links {
     display: none;
-    list-style-type: none;
+    position: absolute;
+    list-style: none;
     padding: 0;
     margin: 0;
     background-color: #fff;
-    position: absolute;
     top: 60px;
     right: 0;
     width: 100%;
@@ -57,6 +57,10 @@ nav {
     text-decoration: none;
     color: #333;
     font-size: 18px;
+}
+
+.header__nav-item a:hover {
+    text-decoration: underline;
 }
 
 /* Maakt de lijst zichtbaar wanneer de "active" klasse via JavaScript wordt toegevoegd */
@@ -88,6 +92,7 @@ nav {
         justify-content: flex-end;
         align-items: center;
         background-color: transparent;
+
 
     }
 
