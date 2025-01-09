@@ -22,6 +22,10 @@ nav {
     width: 100%;
 }
 
+.header__menu-icon {
+    display: flex;
+    flex-direction: row-reverse;
+}
 
 .header__menu-icon img {
     width: 30px;
@@ -29,10 +33,8 @@ nav {
     cursor: pointer;
 }
 
-
-.header__controls {
-    display: flex;
-    justify-content: flex-end;
+.moon-icon {
+    padding-right: 1rem;
 }
 
 
@@ -46,18 +48,22 @@ nav {
     top: 60px;
     right: 0;
     width: 100%;
+    height: 100vh;
 }
 
 .header__nav-item {
     text-align: center;
     padding: 15px;
+    border: #333 1px solid;
 }
 
 .header__nav-item a {
     text-decoration: none;
-    color: #333;
-    font-size: 18px;
+    color: #0c0c0c;
+    font-size: 3rem;
+    font-weight: 600;
 }
+
 
 .header__nav-item a:hover {
     text-decoration: underline;
@@ -65,8 +71,13 @@ nav {
 
 /* Maakt de lijst zichtbaar wanneer de "active" klasse via JavaScript wordt toegevoegd */
 .header__nav-links.active {
-    display: block;
+    display:block;
+    background-color: #8f94d6;
+
 }
+
+.moon {
+    display: none;}
 
 
 @media (min-width: 768px) {
@@ -81,7 +92,7 @@ nav {
     }
 
     .header__logo a {
-        display: flex ;
+        display: flex;
         font-size: 3rem;
         min-width: 22rem;
     }
@@ -92,14 +103,22 @@ nav {
         justify-content: flex-end;
         align-items: center;
         background-color: transparent;
-
+        height: auto;
+        gap: 1rem;
 
     }
 
     .header__nav-item {
         padding: 0 1rem;
+        border: none;
     }
 
+    .header__nav-item a {
+        font-weight: 400;
+    }
 
+    .moon {
+        display: block;
+    }
 
 }
