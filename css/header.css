@@ -5,7 +5,6 @@ header {
     padding: 1rem;
     background-color: #fff;
     border-bottom: #a3ade3 2px solid;
-
 }
 
 .header__logo a {
@@ -37,7 +36,6 @@ nav {
     padding-right: 1rem;
 }
 
-
 .header__nav-links {
     display: none;
     position: absolute;
@@ -64,27 +62,23 @@ nav {
     font-weight: 600;
 }
 
-
 .header__nav-item a:hover {
     text-decoration: underline;
 }
 
 /* Maakt de lijst zichtbaar wanneer de "active" klasse via JavaScript wordt toegevoegd */
 .header__nav-links.active {
-    display:block;
+    display: block;
     background-color: #8f94d6;
-
 }
 
 .moon {
-    display: none;}
-
+    display: none;
+}
 
 @media (min-width: 768px) {
-
     header {
         padding: 4rem 3rem;
-
     }
 
     .header__menu-icon {
@@ -105,7 +99,6 @@ nav {
         background-color: transparent;
         height: auto;
         gap: 1rem;
-
     }
 
     .header__nav-item {
@@ -120,5 +113,4 @@ nav {
     .moon {
         display: block;
     }
-
 }

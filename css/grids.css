@@ -28,7 +28,7 @@
 
 .album__description {
     text-align: center;
-    font-size: 2rem;;
+    font-size: 2rem;
 }
 
 .album__title {
@@ -55,9 +55,8 @@
     font-weight: 200;
     margin: 1rem;
 }
+
 /* Series-Movies Cards style */
-
-
 .series-list, .movies-list {
     display: flex;
     flex-direction: column;
@@ -82,7 +81,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top:rem;
+    margin-top: 2rem; /* Provide a valid margin value */
 }
 
 @media (min-width: 768px) {
@@ -92,8 +91,8 @@
         justify-content: center;
         margin-bottom: 6rem;
     }
-
 }
+
 .card  img {
     width: 50rem;
 }
@@ -119,7 +118,7 @@
 
 @media (min-width: 768px) {
     .card__title {
-        max-width:50rem ;
+        max-width: 50rem;
     }
 }
 
@@ -135,9 +134,10 @@
 
 @media (min-width: 768px) {
     .card__description {
-        max-width:56rem ;
+        max-width: 56rem;
     }
 }
+
 .card__links {
     padding-bottom: 1rem;
     margin-bottom: 6rem;
@@ -148,7 +148,7 @@
     text-decoration: none;
     color: black;
     background-color: hsla(222, 100%, 84%, 0.703);
-    border-radius:5px;
+    border-radius: 5px;
     padding: 1.5rem;
     margin-right: 2rem;
     font-size: 2rem;
@@ -159,9 +159,8 @@
     text-decoration: none;
     color: black;
     background-color: hsla(222, 100%, 84%, 0.541);
-    border-radius:30px;
+    border-radius: 30px;
     padding: 0.8rem;
     font-size: 2rem;
     font-weight: 400;
-   
 }

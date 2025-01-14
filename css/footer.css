@@ -1,12 +1,10 @@
-
 .footer {
     display: flex;
-    flex-direction: column;;
-    padding: rem;
+    flex-direction: column;
+    padding: 2rem 1rem;
     background-color: #fff;
     border-top: hsl(231, 53%, 76%) 1px solid;
     width: 100%;
-    padding: 2rem 1rem;
 }
 
 @media (min-width: 768px) {
