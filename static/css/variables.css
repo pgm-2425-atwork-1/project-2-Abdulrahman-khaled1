@@ -1,0 +1,26 @@
+/* (Light Mode) */
+:root {
+    --base: hsla(0, 0%, 100%, 1);
+    --shade: hsla(228, 100%, 96%, 1);
+    --subtle: hsla(223, 82%, 90%, 1);
+    --tint: hsla(226, 14%, 30%, 1);
+    --contrast: hsla(223, 28%, 15%, 1);
+    --accent: hsla(223, 100%, 84%, 1);
+    --accent-subtle: hsla(225, 34%, 37%, 1);
+    --sun: hsla(68, 100%, 82%, 1);
+  }
+  
+  /* (Dark Mode) */
+  .dark__mode {
+    --base: hsla(223, 28%, 15%, 1);
+    --shade: hsla(222, 44%, 8%, 1);
+    --subtle: hsla(226, 14%, 30%, 1);
+    --tint: hsla(223, 8%, 65%, 1);
+    --contrast: hsla(0, 0%, 100%, 1);
+    --accent: hsla(225, 34%, 37%, 1);
+    --accent-subtle: hsla(223, 100%, 84%, 1);
+    --sun: hsla(68, 100%, 82%, 1);
+  }
+  
+
+ 
