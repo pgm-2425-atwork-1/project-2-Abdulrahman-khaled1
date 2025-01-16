@@ -52,3 +52,50 @@ async function fetchAlbums() {
 if (albumsContainer) {
   fetchAlbums();
 }
+
+
+// === Fetch Movies =====
+const moviesList = document.getElementById('movies');
+
+async function fetchMovies() {
+    try {
+        const response = await fetch('https://www.pgm.gent/data/bestof2024/movies.json')
+        if (!response.ok) {
+            throw new Error(`Error! ${response.status}`);
+          }
+            const movies = await response.json();
+
+
+            moviesList.innerHTML='';
+
+            for (const card of movies) {
+              const moviesElement = `
+                <li class="card">
+                <img src="${card.image}" alt="">
+                <div class="card__info">
+                    <h2 class="card__title">${card.title}</h2>
+                    <p class="card__description">
+                        ${card.short_description}
+                    </p>
+                    <p class="card__description">
+                        ${card.review}
+                    </p>
+                    <div class="card__links">
+                        <a href="${card.trailer_link}" class="card__link"> Trailer </a>
+                        <a href="${card.imdb_link}" class="card__link"> IMDB </a>
+                    </div>
+                </div>
+            </li>
+              `
+              moviesList.innerHTML +=moviesElement
+            }
+    } catch (error) {
+      console.error('Error fetching albums data:', error);
+    }
+}
+
+if (moviesList) {
+  fetchMovies();
+
+}
+
