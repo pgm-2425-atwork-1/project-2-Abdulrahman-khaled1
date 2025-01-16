@@ -1,5 +1,5 @@
 /* Albums style */
-.albums__list {
+.albums {
     display: flex;
     flex-direction: column;
     list-style: none;
@@ -8,7 +8,7 @@
 }
 
 @media (min-width: 768px) {
-    .albums__list {
+    .albums {
         display: grid;
         grid-template-columns: 33% 33% 33%;
     }
