@@ -56,7 +56,6 @@ if (albumsContainer) {
 
 // === Fetch Movies =====
 const moviesList = document.getElementById('movies');
-
 async function fetchMovies() {
     try {
         const response = await fetch('https://www.pgm.gent/data/bestof2024/movies.json')
@@ -99,3 +98,48 @@ if (moviesList) {
 
 }
 
+// === Fetch Series =====
+
+const seriesList = document.getElementById('series')
+async function fetchSeries() {
+
+  try {
+    const response = await fetch('https://www.pgm.gent/data/bestof2024/series.json')
+    if (!response.ok) {
+      throw new Error(`Error! status: ${response.status}`);
+      
+    }
+    const series = await response.json();
+    seriesList.innerHTML='';
+
+    for (const card of series) {
+      const seriesElement=
+      `
+    <li class="card">
+                <img src="${card.image}" alt="">
+                <div class="card__info">
+                    <h2 class="card__title"> ${card.title}</h2>
+                    <p class="card__description">${card.short_description}</p>
+
+                        <p class="card__description">
+                            ${card.review}
+                        </p> 
+                    <div class="card__links">
+                        <a href="${card.trailer_link}" class="card__link"> Trailer </a>
+                        <a href="${card.imdb_link}" class="card__link"> IMDB </a>
+                    </div>
+                </div>
+            </li>
+      
+    `
+    seriesList.innerHTML+=seriesElement
+    }
+  }
+    catch (error) {
+      console.error('Error fetching series data:', error);
+    }
+  }
+
+  if (seriesList) {
+    fetchSeries();
+  }
