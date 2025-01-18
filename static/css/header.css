@@ -22,18 +22,21 @@ nav {
 }
 
 .header__menu-icon {
+    border: none;
     display: flex;
+    gap: 1rem;
     flex-direction: row-reverse;
+
 }
 
 .header__menu-icon img {
-    width: 30px;
+    width: 4rem;
     height: auto;
     cursor: pointer;
 }
 
 .moon-icon {
-    padding-right: 1rem;
+    padding-left: 1rem;
 }
 
 .header__nav-links {
@@ -81,7 +84,7 @@ nav {
         padding: 4rem 3rem;
     }
 
-    .header__menu-icon {
+    #menu-icon {
         display: none;
     }
 
