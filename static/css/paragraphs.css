@@ -11,7 +11,7 @@
 }
 
 .highlight {
-    color: hsla(0, 0%, 50%, 0.589);
+    color:var(--tint);
     font-size: 2rem;
     font-weight: 500;
 }

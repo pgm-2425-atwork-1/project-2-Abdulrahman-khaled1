@@ -8,8 +8,8 @@ html {
 
 body {
     font-family: 'Fira Mono', sans-serif;
-    background-color: hsla(0, 0%, 100%, 1);
-    color: hsla(223, 28%, 15%, 1);
+    background-color: var(--base);
+    color: var(--contrast);
 }
 
 @media (min-width: 768px) {
@@ -65,7 +65,7 @@ body {
     margin-top: 2rem;
     max-width: 13rem;
     min-height: 5rem;
-    background-color: hsla(223, 100%, 84%, 1);
+    background-color: var(--accent);
     font-family: 'Fira Sans', sans-serif;
     font-size: 2rem;
     font-weight: 400;
@@ -73,7 +73,7 @@ body {
 
 .intro__buttons a {
     text-decoration: none;
-    color: rgb(18, 27, 53);
+    color:var(--contrast)
 }
 
 .intro__buttons img {
@@ -87,7 +87,7 @@ body {
 /* Navigation Links */
 .navigation__links {
     width: 100%;
-    border-top: hsl(231, 53%, 76%) 1px solid;
+    border-top:var(--subtle) 1px solid;
     display: flex;    
     justify-content: center;
     align-items: center;
@@ -102,8 +102,8 @@ body {
     padding: 1rem;
     display: flex;
     margin: 3rem 2rem;
-    color: black;
-    background-color: hsla(222, 100%, 84%, 0.749);
+    color:var(--contrast);
+    background-color: var(--accent);
     border-radius: 5px;
 }
 
