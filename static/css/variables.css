@@ -8,6 +8,7 @@
     --accent: hsla(223, 100%, 84%, 1);
     --accent-subtle: hsla(225, 34%, 37%, 1);
     --sun: hsla(68, 100%, 82%, 1);
+    --icon-filter: invert(0)
   }
   
   /* (Dark Mode) */
@@ -20,5 +21,6 @@
     --accent: hsla(225, 34%, 37%, 1);
     --accent-subtle: hsla(223, 100%, 84%, 1);
     --sun: hsla(68, 100%, 82%, 1);
+    --icon-filter: invert(1)
   }
   

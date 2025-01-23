@@ -107,14 +107,16 @@ body {
     border-radius: 5px;
 }
 
-.navigation__link img {
-    width: 3rem;
+.thema-icon{
+    filter: var(--icon-filter);
 }
 
 .arrow_right {
+    width: 3rem;
     padding-left: 1rem;
 }
 
 .arrow_left {
+    width: 3rem;
     padding-right: 1rem;
 }
