@@ -11,7 +11,7 @@ body {
     background-color: var(--base);
     color: var(--contrast);
 }
-.intro__article {
+.intro {
     /* margin-bottom: 2rem; */
     padding: 2rem;
 }
@@ -21,48 +21,45 @@ body {
         display: flex;
         flex-direction: column;
     }
-
-    .intro {
+/* ------------index-------------- */
+    .introductoin {
         display: flex;
         justify-content: space-between;
         
     }
 
-    .intro__content {
+    .introduction__content {
         padding: 2rem;
     }
 
-    .intro__content p {
+    .introduction__content p {
         font-size: 2.5rem;
         max-width: 71rem;
     }
 
-    .intro__shape {
+    .introduction__shape {
         padding-top: 5rem;
         display: block;
     }
 }
 
-.intro__content {
+.introduction__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 2rem;
 }
 
-.intro__content h1 {
+.introduction__content h1 {
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 1rem;
     margin-top: 4rem;
 }
 
-.intro__description{
-    font-size: 2rem;
-    max-width: 75rem;
-}
 
-.intro__buttons {
+
+.introduction__buttons {
     display: flex;
     border-radius: 1rem;
     justify-content: center;
@@ -76,19 +73,24 @@ body {
     font-weight: 400;
 }
 
-.intro__buttons a {
+.introduction__buttons a {
     text-decoration: none;
     color:var(--contrast)
 }
 
-.intro__buttons img {
+.introduction__buttons img {
     margin-left: 1rem;
 }
 
-.intro__shape {
+.introduction__shape {
     display: none;
 }
 
+/* -----------end index-------------- */
+.intro__description{
+    font-size: 2rem;
+    max-width: 75rem;
+}
 /* Navigation Links */
 .navigation__links {
     width: 100%;

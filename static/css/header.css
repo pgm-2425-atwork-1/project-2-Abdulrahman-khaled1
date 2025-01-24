@@ -86,6 +86,7 @@ nav {
 
 /* Maakt de lijst zichtbaar wanneer de "active" klasse via JavaScript wordt toegevoegd */
 .header__nav-links.active {
+    z-index: 11;
     display: block;
     background-color: var(--subtle);
 }
