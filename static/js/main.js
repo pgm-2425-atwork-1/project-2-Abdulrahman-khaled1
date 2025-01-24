@@ -127,3 +127,5 @@ async function fetchSeries() {
   if (seriesList) {
     fetchSeries();
   }
+
+  
