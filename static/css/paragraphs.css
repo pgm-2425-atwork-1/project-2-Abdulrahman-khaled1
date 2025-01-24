@@ -1,4 +1,4 @@
-.intro__article {
+.movies__article {
     padding: 2rem 2rem 5rem 2rem;
     font-family: "Fira Sans", sans-serif;
 }
@@ -16,7 +16,7 @@
     font-weight: 500;
 }
 
-.intro__description {
+.movies__description {
     font-family: "Fira mono", sans-serif;
     font-size: 2rem;  
     max-width: 45rem;  
@@ -24,7 +24,7 @@
 }
 
 @media (min-width: 768px) {
-    .intro__description {
+    .movies__description {
         max-width: 52rem;
     }
 }

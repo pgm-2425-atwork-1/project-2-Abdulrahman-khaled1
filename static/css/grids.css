@@ -57,14 +57,14 @@
 }
 
 /* Series-Movies Cards style */
-.series-list, .movies-list {
+.series-list, .movies {
     display: flex;
     flex-direction: column;
     margin-right: 2rem;
 }
 
 @media (min-width: 768px) {
-    .series-list, .movies-list {
+    .series-list, .movies {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -144,7 +144,7 @@
     margin-top: 2rem;
 }
 
-.card__link {
+.card__links--link {
     text-decoration: none;
     color: var(--contrast);
     background-color: var(--subtle);
