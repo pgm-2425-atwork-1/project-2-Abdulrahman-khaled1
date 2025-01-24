@@ -132,7 +132,7 @@ if (seriesList) {
 
 // ====Fetch Games ===
 const gamesContainer = document.getElementById("games");
-const gameGalleryContainer = document.querySelector(".game-gallery"); 
+const gameGalleryContainer = document.querySelector(".game-gallery");
 async function fetchGames() {
   try {
     const response = await fetch(
@@ -176,7 +176,7 @@ async function fetchGames() {
         }
       }
     }
-    
+
     const firstImage = gamesContainer.querySelector(".slider__image");
     if (firstImage) {
       firstImage.classList.add("active");
@@ -190,4 +190,3 @@ async function fetchGames() {
 if (gamesContainer) {
   fetchGames();
 }
-  
