@@ -1,35 +1,40 @@
 // === Fetch Albums =====
-const albumsContainer = document.getElementById('albums');
+const albumsContainer = document.getElementById("albums");
 async function fetchAlbums() {
   try {
-      const response = await fetch('https://www.pgm.gent/data/bestof2024/albums.json');
-      if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-      }
+    const response = await fetch(
+      "https://www.pgm.gent/data/bestof2024/albums.json"
+    );
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
 
-      const albums = await response.json();
+    const albums = await response.json();
 
-          
-          albumsContainer.innerHTML = '';
+    albumsContainer.innerHTML = "";
 
-          for (const album of albums) {
-              const albumElement = `
+    for (const album of albums) {
+      const albumElement = `
                   <li class="album">
                       <img src="${album.image}" alt="${album.title}">
                       <h2 class="album__title">${album.title}</h2>
                       <p class="album__month">${album.release_date}</p>
                       <p class="album__artist">${album.artist}</p>
                       <div class="album__genres">
-                          ${album.genre.map(genre => `<p class="album__genre">${genre}</p>`).join('')}
+                          ${album.genre
+                            .map(
+                              (genre) => `<p class="album__genre">${genre}</p>`
+                            )
+                            .join("")}
                       </div>
                   </li>
               `;
-              albumsContainer.innerHTML += albumElement;
-          }
-     
+      albumsContainer.innerHTML += albumElement;
+    }
   } catch (error) {
-      console.error('Error fetching albums data:', error);
-      albumsContainer.innerHTML = '<p>Failed to load albums. Please try again later.</p>';
+    console.error("Error fetching albums data:", error);
+    albumsContainer.innerHTML =
+      "<p>Failed to load albums. Please try again later.</p>";
   }
 }
 
@@ -37,22 +42,22 @@ if (albumsContainer) {
   fetchAlbums();
 }
 
-
 // === Fetch Movies =====
-const moviesList = document.getElementById('movies');
+const moviesList = document.getElementById("movies");
 async function fetchMovies() {
-    try {
-        const response = await fetch('https://www.pgm.gent/data/bestof2024/movies.json')
-        if (!response.ok) {
-            throw new Error(`Error! ${response.status}`);
-          }
-            const movies = await response.json();
+  try {
+    const response = await fetch(
+      "https://www.pgm.gent/data/bestof2024/movies.json"
+    );
+    if (!response.ok) {
+      throw new Error(`Error! ${response.status}`);
+    }
+    const movies = await response.json();
 
+    moviesList.innerHTML = "";
 
-            moviesList.innerHTML='';
-
-            for (const card of movies) {
-              const moviesElement = `
+    for (const card of movies) {
+      const moviesElement = `
                 <li class="card">
                 <img src="${card.image}" alt="">
                 <div class="card__info">
@@ -69,36 +74,34 @@ async function fetchMovies() {
                     </div>
                 </div>
             </li>
-              `
-              moviesList.innerHTML +=moviesElement
-            }
-    } catch (error) {
-      console.error('Error fetching albums data:', error);
+              `;
+      moviesList.innerHTML += moviesElement;
     }
+  } catch (error) {
+    console.error("Error fetching albums data:", error);
+  }
 }
 
 if (moviesList) {
   fetchMovies();
-
 }
 
 // === Fetch Series =====
 
-const seriesList = document.getElementById('series')
+const seriesList = document.getElementById("series");
 async function fetchSeries() {
-
   try {
-    const response = await fetch('https://www.pgm.gent/data/bestof2024/series.json')
+    const response = await fetch(
+      "https://www.pgm.gent/data/bestof2024/series.json"
+    );
     if (!response.ok) {
       throw new Error(`Error! status: ${response.status}`);
-      
     }
     const series = await response.json();
-    seriesList.innerHTML='';
+    seriesList.innerHTML = "";
 
     for (const card of series) {
-      const seriesElement=
-      `
+      const seriesElement = `
     <li class="card">
                 <img src="${card.image}" alt="">
                 <div class="card__info">
@@ -115,60 +118,76 @@ async function fetchSeries() {
                 </div>
             </li>
       
-    `
-    seriesList.innerHTML+=seriesElement
+    `;
+      seriesList.innerHTML += seriesElement;
     }
+  } catch (error) {
+    console.error("Error fetching series data:", error);
   }
-    catch (error) {
-      console.error('Error fetching series data:', error);
+}
+
+if (seriesList) {
+  fetchSeries();
+}
+
+// ====Fetch Games ===
+const gamesContainer = document.getElementById("games");
+const gameGalleryContainer = document.querySelector(".game-gallery"); 
+async function fetchGames() {
+  try {
+    const response = await fetch(
+      "https://www.pgm.gent/data/bestof2024/games.json"
+    );
+
+    if (!response.ok) {
+      throw new Error(`Error! status: ${response.status}`);
     }
-  }
 
-  if (seriesList) {
-    fetchSeries();
-  }
+    const games = await response.json();
+    console.log("Games data:", games);
 
-
-  // ====Fetch Games ===
-  const gamesContainer = document.getElementById("games");
-
-  async function fetchGames() {
-    try {
-      const response = await fetch("https://www.pgm.gent/data/bestof2024/games.json");
-  
-      if (!response.ok) {
-        throw new Error(`Error! status: ${response.status}`);
-      }
-  
-      const games = await response.json();
-      console.log("Games data:", games); // تأكد أن البيانات صحيحة
-  
+    if (gamesContainer) {
       gamesContainer.innerHTML = "";
-  
-      for (const game of games) {
-        const gameElement = `
+    }
+    if (gameGalleryContainer) {
+      gameGalleryContainer.innerHTML = "";
+    }
+
+    for (const game of games) {
+      if (!game.honorable_mentions) {
+        const sliderElement = `
           <div class="slider__image">
             <img src="${game.image}" alt="${game.title}">
             <span class="image-title">${game.title}</span>
           </div>
         `;
-        gamesContainer.innerHTML += gameElement;
-      }
-  
-      // تعيين الصورة الأولى كـ active
-      const firstImage = gamesContainer.querySelector(".slider__image");
-      if (firstImage) {
-        firstImage.classList.add("active");
+        if (gamesContainer) {
+          gamesContainer.innerHTML += sliderElement;
+        }
       } else {
-        console.error("No images found in games container");
+        const galleryElement = `
+          <div class="game-gallery__item">
+            <img class="game-gallery__image" src="${game.image}" alt="${game.title}">
+            <span class="game-gallery__title">${game.title}</span>
+          </div>
+        `;
+        if (gameGalleryContainer) {
+          gameGalleryContainer.innerHTML += galleryElement;
+        }
       }
-    } catch (error) {
-      console.error("Error fetching games data:", error);
     }
+    
+    const firstImage = gamesContainer.querySelector(".slider__image");
+    if (firstImage) {
+      firstImage.classList.add("active");
+    } else {
+      console.error("No images found in games container");
+    }
+  } catch (error) {
+    console.error("Error fetching games data:", error);
   }
-  
-  // استدعاء الدالة عند تحميل الصفحة
-  if (gamesContainer) {
-    fetchGames();
-  }
+}
+if (gamesContainer) {
+  fetchGames();
+}
   

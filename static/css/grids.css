@@ -213,4 +213,31 @@
     color: var(--tint);
   }
 
+.game-gallery {
+    display: flex;
+    flex-direction: column;
+}
+  @media  (min-width: 768px) {
+    .slider {
+      width: 95%; 
+    }
+  
+    .slider__image {
+      width: 100%; 
+      height: auto;
+    }
+  
+    button {
+      padding: 8px; 
+    }
+  
+    .image-title {
+      font-size: 0.9rem; 
+    }
+    .game-gallery {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+  }
 /* End games style */
