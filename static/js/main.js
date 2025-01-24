@@ -153,40 +153,81 @@ async function fetchGames() {
       gameGalleryContainer.innerHTML = "";
     }
 
+    let sliderContent = ""; //buiten (forloop) om niet meerdere keren binnen for lop te schrijven
+    let galleryContent = "";
+    // Verdeel de spellen in de slider en de sectie "Honorable Mentions" op basis van de eigenschap "honorable_mentions".
+    // Er worden dynamisch HTML-elementen aangemaakt en toegevoegd aan de juiste container (slider voor gewone spellen en "game-gallery" voor eervolle vermeldingen).
     for (const game of games) {
       if (!game.honorable_mentions) {
-        const sliderElement = `
+        sliderContent += `
           <div class="slider__image">
             <img src="${game.image}" alt="${game.title}">
             <span class="image-title">${game.title}</span>
           </div>
         `;
-        if (gamesContainer) {
-          gamesContainer.innerHTML += sliderElement;
-        }
       } else {
-        const galleryElement = `
+        galleryContent += `
           <div class="game-gallery__item">
             <img class="game-gallery__image" src="${game.image}" alt="${game.title}">
             <span class="game-gallery__title">${game.title}</span>
           </div>
         `;
-        if (gameGalleryContainer) {
-          gameGalleryContainer.innerHTML += galleryElement;
-        }
       }
     }
 
+    if (gamesContainer) {
+      gamesContainer.innerHTML = sliderContent;
+    }
+
+    if (gameGalleryContainer) {
+      gameGalleryContainer.innerHTML = galleryContent;
+    }
+
+    // Het eerste item in de slider selecteren en als "actiev" instellen
     const firstImage = gamesContainer.querySelector(".slider__image");
     if (firstImage) {
       firstImage.classList.add("active");
     } else {
       console.error("No images found in games container");
     }
+    initializeSlider();
   } catch (error) {
     console.error("Error fetching games data:", error);
   }
 }
 if (gamesContainer) {
   fetchGames();
+}
+
+const prevBtn = document.getElementById("prev-btn");
+const nextBtn = document.getElementById("next-btn");
+function initializeSlider() {
+  const images = document.querySelectorAll(".slider__image");
+  let currentIndex = 0;
+
+  function updateSlider() {
+    images.forEach((image, index) => {
+      image.classList.toggle("active", index === currentIndex);
+    });
+
+    prevBtn.style.display = currentIndex === 0 ? "none" : "block";
+    nextBtn.style.display =
+      currentIndex === images.length - 1 ? "none" : "block";
+  }
+
+  prevBtn.addEventListener("click", () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateSlider();
+    }
+  });
+
+  nextBtn.addEventListener("click", () => {
+    if (currentIndex < images.length - 1) {
+      currentIndex++;
+      updateSlider();
+    }
+  });
+
+  updateSlider();
 }

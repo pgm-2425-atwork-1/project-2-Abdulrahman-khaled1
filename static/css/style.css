@@ -11,7 +11,10 @@ body {
     background-color: var(--base);
     color: var(--contrast);
 }
-
+.intro__article {
+    /* margin-bottom: 2rem; */
+    padding: 2rem;
+}
 @media (min-width: 768px) {
     .albums__content {
         align-items: center;
@@ -22,6 +25,7 @@ body {
     .intro {
         display: flex;
         justify-content: space-between;
+        
     }
 
     .intro__content {
@@ -29,7 +33,8 @@ body {
     }
 
     .intro__content p {
-        min-width: 57rem;
+        font-size: 2.5rem;
+        max-width: 71rem;
     }
 
     .intro__shape {
@@ -52,9 +57,9 @@ body {
     margin-top: 4rem;
 }
 
-.intro__content p {
+.intro__description{
     font-size: 2rem;
-    max-width: 35rem;
+    max-width: 75rem;
 }
 
 .intro__buttons {
