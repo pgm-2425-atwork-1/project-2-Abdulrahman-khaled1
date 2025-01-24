@@ -128,4 +128,47 @@ async function fetchSeries() {
     fetchSeries();
   }
 
+
+  // ====Fetch Games ===
+  const gamesContainer = document.getElementById("games");
+
+  async function fetchGames() {
+    try {
+      const response = await fetch("https://www.pgm.gent/data/bestof2024/games.json");
+  
+      if (!response.ok) {
+        throw new Error(`Error! status: ${response.status}`);
+      }
+  
+      const games = await response.json();
+      console.log("Games data:", games); // تأكد أن البيانات صحيحة
+  
+      gamesContainer.innerHTML = "";
+  
+      for (const game of games) {
+        const gameElement = `
+          <div class="slider__image">
+            <img src="${game.image}" alt="${game.title}">
+            <span class="image-title">${game.title}</span>
+          </div>
+        `;
+        gamesContainer.innerHTML += gameElement;
+      }
+  
+      // تعيين الصورة الأولى كـ active
+      const firstImage = gamesContainer.querySelector(".slider__image");
+      if (firstImage) {
+        firstImage.classList.add("active");
+      } else {
+        console.error("No images found in games container");
+      }
+    } catch (error) {
+      console.error("Error fetching games data:", error);
+    }
+  }
+  
+  // استدعاء الدالة عند تحميل الصفحة
+  if (gamesContainer) {
+    fetchGames();
+  }
   

@@ -28,3 +28,40 @@
         max-width: 52rem;
     }
 }
+
+/* GamesParagraphs  */
+
+.description, .mentions {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem
+}
+
+.mentions {
+    border-top: var(--subtle) 2px solid;
+}
+.description__paragraph, .mentions__paragraph {
+    line-height: 1.6;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    max-width: 34.4rem;
+}
+
+@media (min-width:768px) {
+    .description__paragraph, .mentions__paragraph {
+        line-height: 2;
+        font-size: 2rem;
+        max-width: 68rem;
+
+    }
+
+    .mentions__title{
+        font-size: 3rem;
+    }
+
+
+}
