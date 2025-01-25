@@ -25,14 +25,14 @@ nav {
     display: flex;
     gap: 1rem;
     flex-direction: row-reverse;
-    
+
 }
 
 .header__menu-icon img {
     max-width: 3rem;
     height: auto;
     cursor: pointer;
-    
+
 }
 
 .moon-icon {
@@ -41,18 +41,18 @@ nav {
 
 }
 
-.dark-mode .moon-icon{
-    display:none
+.dark-mode .moon-icon {
+    display: none
 }
 
-.sun-icon{
+.sun-icon {
     min-width: 5rem;
     padding-left: 2rem;
     display: none;
 }
 
-.dark-mode .sun-icon{
-    display:block
+.dark-mode .sun-icon {
+    display: block
 }
 
 .header__nav-links {

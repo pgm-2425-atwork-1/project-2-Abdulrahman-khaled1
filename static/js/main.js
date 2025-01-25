@@ -1,4 +1,5 @@
 // === Fetch Albums =====
+
 const albumsContainer = document.getElementById("albums");
 async function fetchAlbums() {
   try {
@@ -153,7 +154,6 @@ async function fetchGames() {
       gameGalleryContainer.innerHTML = "";
     }
 
-    
     let sliderContent = ""; //buiten (forloop) om niet meerdere keren binnen for lop te schrijven
     let galleryContent = "";
     // Verdeel de spellen in de slider en de sectie "Honorable Mentions" op basis van de eigenschap "honorable_mentions".
