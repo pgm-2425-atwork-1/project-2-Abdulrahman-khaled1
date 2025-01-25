@@ -144,7 +144,7 @@
     margin-top: 2rem;
 }
 
-.card__links--link {
+.card__links a {
     text-decoration: none;
     color: var(--contrast);
     background-color: var(--subtle);
@@ -192,7 +192,7 @@
       z-index: 1;
       width: 100rem;
   }
-button {
+    .slider__button {
   position: absolute; 
   top: 50%; 
   transform: translateY(-50%); 

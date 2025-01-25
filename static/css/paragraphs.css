@@ -1,3 +1,79 @@
+.intro {
+    /* margin-bottom: 2rem; */
+    padding: 2rem;
+}
+@media (min-width: 768px) {
+    .albums__content {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+/* ------------index-------------- */
+    .introductoin {
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+    .introduction__content {
+        padding: 2rem;
+    }
+
+    .introduction__content p {
+        font-size: 2.5rem;
+        max-width: 71rem;
+    }
+
+    .introduction__shape {
+        padding-top: 5rem;
+        display: block;
+    }
+}
+
+.introduction__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.introduction__content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    margin-top: 4rem;
+}
+
+
+
+.introduction__buttons {
+    display: flex;
+    border-radius: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    max-width: 13rem;
+    min-height: 5rem;
+    background-color: var(--accent);
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.introduction__buttons a {
+    text-decoration: none;
+    color:var(--contrast)
+}
+
+.introduction__buttons img {
+    margin-left: 1rem;
+}
+
+.introduction__shape {
+    display: none;
+}
+
+/* -----------end index-------------- */
 
 .intro__title {
     font-size: 4rem;
